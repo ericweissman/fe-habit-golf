@@ -1,5 +1,13 @@
 language: node_js
 node_js:
-  - "node"
-notifications: 
+- node
+notifications:
   email: false
+before_script:
+- npm run test
+deploy:
+  provider: heroku,
+  api_key:
+    secure: jTlZZTTlQJuW7kK8fHxVBVYnKSWC0NUBD15+vrNy2CY7IQQxFZSxXiV6zLH13tTiWTSvpIP23EMLVVwzL6OpbM+NIvYwOqcOZOTmV9P4PcdlIWMQaJkNHdZOsIepEaB+eCTDDDy7/PKe8IesbNgBibbVIrIqkKDFsA5Pk56If9iuVyAA+1EB5C+4XhtZk1nGP55cEBXi24nJpaA0gr6sNiXKharxIVA0/sj6az0MEIvTZWfol+CgcT21asfAT5MXTIl4tgtYdsCv+NhE8T/J5ErQk5sN9WB4JgFcHjgwustApBcWrJeDgKr5xzWqFI8Y3g06uLn3M8ihcmBvQQ7rHtAJ3b3/W3hZQTotX2lNydKKXhf4k8cPI9R1tNMEzVKbCzdtp923FyQcISOt36bVl8vc8dCKVVSa7PKz5KyjrqQ93YEKKCV32cPgMhGGABLu/SRk/6BjxEyla6cVoAuxY8wrnf1QXdA3IG7AjNMb+5UQl3zYW/W9MI75+3GGCnGw7xsqwXWYZrL4TVQ6ZEvRBJiSdDoZ3OKPgNvH9/XDSTpmmuwwX67djHOn+h8BchO2HzUhNuww3vXWa5FBfzzyE23exNbgC71cwg2MSN+4VYdVDekT2x3KxChbS6Z1PGYi4kvdK9NwNYe1Ug2X5f6OZsDdGWDJ+Buj3E4j70QHxCw=
+  app: fe-habit-golf
+  skip_cleanup: true
