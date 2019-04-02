@@ -4,7 +4,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "jest --forceExit",
+    "test:watch": "jest --watchAll"
   },
   "dependencies": {
     "expo": "^32.0.0",
